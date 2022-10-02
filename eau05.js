@@ -7,7 +7,7 @@ function contientChaine(arr) {
 
     // return arr[0].includes(arr[1]);
 
-    for (var i = 0; i < arr[1].length; i++) {
+    for (let i = 0; i < arr[1].length; i++) {
       if (arr[0].indexOf(arr[1]) !== -1) {
         return true;
       } else {

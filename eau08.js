@@ -1,4 +1,4 @@
-var numbers = '0123456789';
+const numbers = '0123456789';
 
 function numOnly(str) {
   // On gère les erreurs de paramètres
@@ -9,7 +9,7 @@ function numOnly(str) {
     // return !isNaN(str);
 
     str = str.toString();
-    var count = 0;
+    let count = 0;
 
     while (count < str.length) {
       if (numbers.includes(str.charAt(count))) {

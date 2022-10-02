@@ -1,5 +1,5 @@
 // On donne une base d'alphabet pour tester plus tard si un caractère est une lettre
-var alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 function contientChaine(str) {
   // On gère les erreurs de paramètres
@@ -10,11 +10,11 @@ function contientChaine(str) {
 
     // On s'assure de manipuler une str et on défini un compteur pair impair et la newStr dans laquelle on va écrire le résultat
     str = str.toString();
-    var newStr = '';
-    var count = 1;
+    let newStr = '';
+    let count = 1;
 
     // On va parcourir str pour en copier le contenu
-    for (var i = 0; i < str.length; i++) {
+    for (let i = 0; i < str.length; i++) {
 
       // Si c'est impair --> Majuscule
       if (count % 2 !== 0) {

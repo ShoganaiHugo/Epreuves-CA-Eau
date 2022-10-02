@@ -1,9 +1,9 @@
 function combinaisons() {
 
-  tab = [0, 1, 2];
-  i = 0;
-  j = 0;
-  k = 0;
+  let tab = [0, 1, 2];
+  let i = 0;
+  let j = 0;
+  let k = 0;
 
   while (i <= 7) {
     j = i + 1;

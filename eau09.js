@@ -7,7 +7,7 @@ function numOnly(str) {
 
     // Si str0 < str1
     if (str[0] < str[1]) {
-      var count = str[0];
+      let count = str[0];
       while (count < str[1]) {
         process.stdout.write(count + ' ');
         count++;
@@ -15,7 +15,7 @@ function numOnly(str) {
 
     // Si str1 < str0
     } else if (str[1] < str[0]) {
-      var count = str[1];
+      let count = str[1];
       while (count < str[0]) {
         process.stdout.write(count + ' ');
         count++;
