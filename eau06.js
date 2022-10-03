@@ -1,7 +1,7 @@
 // On donne une base d'alphabet pour tester plus tard si un caractère est une lettre
 let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-function contientChaine(str) {
+function majSurDeux(str) {
   // On gère les erreurs de paramètres
   if (str.length === 0 || !isNaN(str) === true || str.length > 1) {
     return 'error';
@@ -43,4 +43,4 @@ function contientChaine(str) {
 }
 
 
-console.log(contientChaine(process.argv.slice(2)));
+console.log(majSurDeux(process.argv.slice(2)));

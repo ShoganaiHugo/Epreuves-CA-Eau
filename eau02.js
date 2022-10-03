@@ -1,5 +1,4 @@
-
-function argReverse(arrayOfWord) {
+function reversePara(arrayOfWord) {
   //On vérifie s'il existe un paramètre
   if (arrayOfWord.length !== 0) {
 
@@ -15,4 +14,4 @@ function argReverse(arrayOfWord) {
 }
 
 
-return argReverse(process.argv.slice(2));
+return reversePara(process.argv.slice(2));

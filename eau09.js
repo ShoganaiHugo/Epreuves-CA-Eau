@@ -1,4 +1,4 @@
-function numOnly(str) {
+function minToMAx(str) {
   // On gère les erreurs de paramètres
   if (str.length !== 2 || !isNaN(str) === true) {
     console.log('error');
@@ -32,4 +32,4 @@ function numOnly(str) {
 }
 
 
-return numOnly(process.argv.slice(2));
+return minToMAx(process.argv.slice(2));
