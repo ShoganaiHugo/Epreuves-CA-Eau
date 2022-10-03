@@ -1,4 +1,4 @@
-function triBulle(arr) {
+function triSelection(arr) {
   // On gère les erreurs de paramètres
   if (arr.length < 2) {
     return 'error';
@@ -28,9 +28,9 @@ function triBulle(arr) {
       // On vérifie Number pour bien comparer des integer et non des string
       if (Number(newArr[i]) > Number(newArr[i+1])) {
         // On décale tout à droite la valeur la plus "grande"
-        tmp = newArr[i+1];
-        newArr[i+1] = newArr[i];
-        newArr[i] = tmp;
+        tmp = newArr[i];
+        newArr[i] = newArr[i+1];
+        newArr[i+1] = tmp;
         // On fait en sorte que i = 0 pour boucler jusqu'à ce que le array soit trié
         i = -1;
       }
@@ -44,4 +44,4 @@ function triBulle(arr) {
 }
 
 
-console.log(triBulle(process.argv.slice(2)));
+console.log(triSelection(process.argv.slice(2)));
