@@ -1,11 +1,11 @@
-function triSelection(arr) {
+function triAscii(arr) {
   // On gère les erreurs de paramètres
   if (arr.length < 2) {
     return 'error';
 
   } else {
 
-    // On va s'assurer que les paramètres sont bien des valeurs numériques
+    // On va s'assurer que les paramètres ne sont pas des valeurs numériques
     // J'utilise la même méthode que pour l'exo "Chiffres Only"
     let arrStr = arr.join('');
     let count = 0;
@@ -13,9 +13,9 @@ function triSelection(arr) {
 
     while (count < arrStr.length) {
       if (numbers.includes(arrStr.charAt(count))) {
-        count++;
-      } else {
         return 'erreur';
+      } else {
+        count++;
       }
     }
 
@@ -25,9 +25,9 @@ function triSelection(arr) {
     let newArr = arr;
     // Pour que le check se fasse jusu'à ce que tout soit ok
     while (i < newArr.length) {
-      // On vérifie Number pour bien comparer des integer et non des string
-      if (Number(newArr[i]) > Number(newArr[i+1])) {
-        // On décale tout à gauche la valeur la plus "petite"
+      
+      if (newArr[i] > newArr[i+1]) {
+        // On décale tout à gauche le première élément par ordre ASCII
         tmp = newArr[i];
         newArr[i] = newArr[i+1];
         newArr[i+1] = tmp;
@@ -44,4 +44,4 @@ function triSelection(arr) {
 }
 
 
-console.log(triSelection(process.argv.slice(2)));
+console.log(triAscii(process.argv.slice(2)));
