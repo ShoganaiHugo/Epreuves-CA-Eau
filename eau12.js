@@ -19,20 +19,26 @@ function miniAbsolute(arr) {
       }
     }
 
-    let tmp = 0;
-    for (let i = arr.length - 1; i = 1; i--) {
-      for (let j = 1; j === i; j++) {
-        if (arr[j] > arr[j + 1]) {
-          tmp = arr[j];
-          arr[j] = arr[j + 1];
-          arr[j + 1] = tmp;
-        } else {
-          continue;
-        }
+    // On créé un array de resultat, une var pour stocker temporairement des valeurs et un compteur
+    let tmp = '';
+    let i = 0;
+    let newArr = arr;
+    // Pour que le check se fasse jusu'à ce que tout soit ok
+    while (i < newArr.length) {
+      // On vérifie Number pour bien comparer des integer et non des string
+      if (Number(newArr[i]) > Number(newArr[i+1])) {
+        // On décale tout à droite la valeur la plus "grande"
+        tmp = newArr[i+1];
+        newArr[i+1] = newArr[i];
+        newArr[i] = tmp;
+        // On fait en sorte que i = 0 pour boucler jusqu'à ce que le array soit trié
+        i = -1;
       }
+      i++;
     }
 
-    return arr;
+    // On affiche le tableau de résultat
+    return newArr;
 
   }
 }
